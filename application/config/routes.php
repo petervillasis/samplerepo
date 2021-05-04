@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['validatelogin'] = 'modules/validatelogin';
+$route['saveregistration'] = 'modules/saveregistration';
 
 $route['default_controller'] = 'modules/loadpage';
 $route['404_override'] = '';

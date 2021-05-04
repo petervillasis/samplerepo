@@ -16,9 +16,9 @@
 
         );
 
-            $result = $this->db->get_where('useraccess', $data_collect);
+            $result = $this->db->get_where('useraccess', $data_collect)->row_array();
 
-            if($result->num_rows() == 1){
+            if(!empty($result)){
                 $this->session->set_flashdata('valid','valid');
                 redirect(base_url());
             }else{
@@ -26,6 +26,26 @@
                 redirect(base_url());
             }
                 
+
+        }
+
+        public function savedetails(){
+            
+            $data_collect = array(
+
+                'firstname' => $this->input->post('firstname',true),
+                'middlename' => $this->input->post('middlename',true),
+                'lastname' => $this->input->post('lastname',true),
+                'email' => $this->input->post('email',true),
+                'password' => $this->input->post('password',true)
+
+            );
+
+            $result = $this->db->insert('useraccess', $data_collect);
+            $this->session->set_flashdata('Saved!','valid');
+            redirect(base_url());
+
+            
 
         }
     }

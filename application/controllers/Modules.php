@@ -26,7 +26,7 @@
 
         public function saveregistration(){
 
-
+            $result = $this->Functions_model->savedetails();
 
         }
     }
