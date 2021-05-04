@@ -13,6 +13,7 @@
             
             $this->load->view('templates/header');
             $this->load->view('modules/'.$module, $data);
+            $this->load->view('templates/modal');
             $this->load->view('templates/footer');
 
         }
