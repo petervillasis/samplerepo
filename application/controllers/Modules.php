@@ -9,6 +9,7 @@
             }
 
             $data['title'] = "Security Login";
+            
             $this->load->loadpage('templates/header');
             $this->load->loadpage('modules/'.$module, $data);
             $this->load->loadpage('templates/footer');
