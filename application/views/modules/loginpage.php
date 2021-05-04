@@ -1,4 +1,4 @@
-
+<?= form_open('validatelogin');?>
 <main class="login-form">
     <div class="cotainer">
         <div class="row justify-content-center">
@@ -6,11 +6,16 @@
                 <div class="card">
                     <div class="card-header">Login</div>
                     <div class="card-body">
+                        <?php if($this->session->flashdata('valid')) : ?>
+                            <?= '<div class="alert alert-primary" role="alert">Your account is valid!</div>';?>
+                        <?php elseif($this->session->flashdata('invalid')) : ?>
+                            <?= '<div class="alert alert-danger" role="alert">Your account is invalid!</div>';?>
+                        <?php endif;?>
                         <form action="" method="">
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="email_address" class="form-control" name="email" required autofocus>
                                 </div>
                             </div>
 

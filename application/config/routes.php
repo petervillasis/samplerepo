@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-
+$route['validatelogin'] = 'modules/validatelogin';
 
 $route['default_controller'] = 'modules/loadpage';
 $route['404_override'] = '';

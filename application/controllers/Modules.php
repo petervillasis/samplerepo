@@ -6,7 +6,7 @@
             $module = "loginpage";
             
             if(!file_exists(APPPATH.'views/modules/'.$module.'.php')){
-                sho_404();
+                show_404();
             }
 
             $data['title'] = "Security Login";
@@ -17,4 +17,17 @@
             $this->load->view('templates/footer');
 
         }
+
+        public function validatelogin(){
+
+            $result = $this->Functions_model->checkdetails();
+
+        }
+
+        public function saveregistration(){
+
+
+
+        }
     }
+?>
