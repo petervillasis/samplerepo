@@ -3,6 +3,6 @@
 <script src="<?=base_url();?>js/bootstrap.min.js"></script>
 <script src="<?=base_url();?>js/bootstrap.bundle.js"></script>
 <script src="<?=base_url();?>js/bootstrap.bundle.min.js"></script>
-
+<script src="<?=base_url();?>js/systemfunction.js"></script>
 </body>
 </html>

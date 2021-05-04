@@ -42,7 +42,7 @@
             );
 
             $result = $this->db->insert('useraccess', $data_collect);
-            $this->session->set_flashdata('Saved!','valid');
+            $this->session->set_flashdata('save','save');
             redirect(base_url());
 
             

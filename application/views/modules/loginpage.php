@@ -10,6 +10,8 @@
                             <?= '<div class="alert alert-primary" role="alert">Your account is valid!</div>';?>
                         <?php elseif($this->session->flashdata('invalid')) : ?>
                             <?= '<div class="alert alert-danger" role="alert">Your account is invalid!</div>';?>
+                        <?php elseif($this->session->flashdata('save')) : ?>
+                            <?= '<div class="alert alert-primary" role="alert">Your Registration was Saved! Try to validate your account.</div>';?>
                         <?php endif;?>
                         <form action="" method="">
                             <div class="form-group row">
